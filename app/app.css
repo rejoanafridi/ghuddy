@@ -1,15 +1,52 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+}
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .hidden-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .hidden-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+    background: #f5f9fa;
+    color: '#142B33';
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+.h1-title-medium {
+    @apply font-medium text-[32px] leading-[44px];
+}
+.h2-subtitle-medium {
+    @apply font-medium text-[24px] leading-8;
+}
+.h5-text-medium {
+    @apply font-medium text-xs;
+}
+
+.h4-text-14-regular {
+    @apply text-sm leading-[19.6px];
+}
+.h4-text-14-medium {
+    @apply text-sm leading-[19.6px] font-medium;
+}
+.h4-text-16-medium {
+    @apply text-base leading-[22px] font-medium  tracking-[3%];
+}
+
+.caption {
+    @apply text-xs leading-4;
+}
+.card-shadow {
+    box-shadow: 0px 0px 10px 0px rgba(135, 159, 168, 0.25);
 }
