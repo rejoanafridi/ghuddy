@@ -3,17 +3,21 @@ import { IconHome, IconLocation, IconStar } from '../Icon/Icons'
 import { motion } from 'framer-motion'
 import FavoriteButton from '~/_components/FavoriteButton'
 import { OfferBadge } from '../Badges'
+import ImageSlider from '~/_components/ImageSlider'
 const HotelCard: React.FC<HotelCardProps> = ({ hotel }) => {
+    hotel.images = [
+        hotel.thumb_image,
+        hotel.thumb_image,
+        hotel.thumb_image,
+        hotel.thumb_image
+    ]
     return (
         <motion.div
-            whileHover={{ scale: 1.05 }}
+            // whileHover={{ scale: 1.05 }}
             className="rounded-xl relative cursor-pointer card-shadow bg-white w-[280px] h-[442px] flex-shrink-0 "
         >
-            <img
-                src={hotel?.thumb_image}
-                alt={hotel?.property_name}
-                className="w-full h-52 object-cover rounded-t-xl"
-            />
+            <ImageSlider hotel={hotel} />
+
             <div className="absolute top-1 right-1">
                 <FavoriteButton itemId={hotel?.id} />
             </div>

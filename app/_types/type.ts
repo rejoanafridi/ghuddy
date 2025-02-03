@@ -5,6 +5,7 @@ export interface RentalType {
 }
 export type HotelCardProps = {
     hotel: {
+        [x: string]: string[]
         id: number
         property_name: string
         short_address: string
