@@ -57,9 +57,20 @@ body {
     transform: translateX(-50%);
     z-index: 10;
 }
-.slick-dots li.slick-active button:before {
-    color: White !important;
+.slick-dots li button:before {
+    color: white !important; /* Set all dots to white */
+    font-size: 10px !important; /* Increase the size of the dots */
+    opacity: 0.6; /* Add some transparency for inactive dots */
 }
-.slick-dots li {
-    margin: 0px !important;
+
+/* Hover dot color */
+.slick-dots li button:hover:before {
+    color: white !important; /* Hover effect with white color */
+    opacity: 1; /* Remove transparency on hover */
+}
+
+/* Active dot color */
+.slick-dots li.slick-active button:before {
+    color: white !important; /* Active dot remains white */
+    opacity: 1; /* Ensure the active dot is fully opaque */
 }
