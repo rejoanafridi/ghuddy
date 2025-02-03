@@ -21,7 +21,7 @@ const PropertyFilter: React.FC<PropertyFilterProps> = ({
     const items = RENTAL_TYPES.map(({ label, value, iconUrl }) => (
         <div key={label} className="px-2">
             <button
-                className={`flex flex-col items-center justify-center cursor-pointer min-w-[78px] h-[60px] gap-1 rounded-lg transition-all duration-300 text-gray-700 hover:bg-gray-200 ${
+                className={`flex flex-col px-2 items-center justify-center cursor-pointer min-w-[78px] h-[60px] gap-1 rounded-lg transition-all duration-300 text-gray-700 hover:bg-gray-200 ${
                     selected === label
                         ? 'bg-blue-500 text-white'
                         : 'bg-gray-100'
@@ -31,7 +31,7 @@ const PropertyFilter: React.FC<PropertyFilterProps> = ({
                 }
             >
                 <img height="20" width="20" src={iconUrl} alt={label} />
-                <span className="h5-text-medium">{label}</span>
+                <span className="h5-text-medium text-wrap">{label}</span>
             </button>
         </div>
     ))
