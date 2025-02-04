@@ -4,8 +4,8 @@ import HotelList from '~/features/HotelCatalog'
 
 export function meta({}: Route.MetaArgs) {
     return [
-        { title: 'Ghuddy Task' },
-        { name: 'description', content: 'Welcome to React Router!' }
+        { title: 'Short Hotel' },
+        { name: 'description', content: 'Hotel Package' }
     ]
 }
 
